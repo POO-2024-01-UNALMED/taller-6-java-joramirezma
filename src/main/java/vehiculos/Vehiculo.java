@@ -21,6 +21,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
+		cantidadVehiculos++;
 	}
 
 	public String getPlaca() {
@@ -95,5 +96,8 @@ public class Vehiculo {
 		Vehiculo.cantidadVehiculos = cantidadVehiculos;
 	}
 	
-	
+	public String vehiculosPorTipo() {
+		return "Automoviles: " + Automovil.getCantidadVehiculos() + "\nCamionestas: " + Camioneta.getCantidad() + "\nCamiones: "
+				+ Camion.getCantidad();
+	}
 }
